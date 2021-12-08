@@ -6,7 +6,7 @@
 #    By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/28 18:23:40 by zcherrad          #+#    #+#              #
-#    Updated: 2021/12/07 21:41:13 by zcherrad         ###   ########.fr        #
+#    Updated: 2021/12/08 04:23:04 by zcherrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ all: $(NAME)
 $(NAME):$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-%.o:%.c
+%.o:%.c ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 
@@ -42,3 +42,4 @@ clean:
 
 fclean:clean
 	$(RM) $(NAME)
+re:fclean all
